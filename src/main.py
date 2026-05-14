@@ -50,7 +50,7 @@ def practice_transfer_learning():
         stock_manager.load_raw_data(isProcessData=False)   # reads CSV files saved by fetch_data()
 
     if isTrainModel:
-        stock_manager.trainModel(ticker="2330.TW", epochs_general=50, epochs_particular=50)
+        stock_manager.trainModel(ticker="2330.TW", epochs_general=10, epochs_particular=10)
 
     if isPredict:
         stock_manager.predict_day(ticker="2330.TW", date="2026-04-30")
