@@ -1,0 +1,7 @@
+*
+!.gitignore
+!src/
+!src/*.py
+!README.md
+!requirements.txt
+src/__pycache__/

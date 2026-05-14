@@ -1,0 +1,12 @@
+numpy
+pandas
+matplotlib
+scikit-learn
+yfinance
+tensorflow
+requests
+lxml
+torch
+torchvision
+torchaudio
+tqdm
