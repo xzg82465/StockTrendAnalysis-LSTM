@@ -33,8 +33,8 @@ def practice_transfer_learning():
     # Import the new class
     from stock_manager import StockDataManager
     
-    isUpdateModel = False
-    isTrainModel = False
+    isUpdateModel = True
+    isTrainModel = True
     isPredict = True
     # Initialize Manager
     stock_manager = StockDataManager()
@@ -44,7 +44,7 @@ def practice_transfer_learning():
         print(stock_manager)
         stock_manager.fillSp500Tickers()
         print(stock_manager)
-        stock_manager.fetch_data(end_date="2026-03-08")
+        stock_manager.fetch_data(end_date="2026-04-29")
     else:
         print("Populating ticker from files...")
         stock_manager.load_raw_data(isProcessData=False)   # reads CSV files saved by fetch_data()
@@ -53,7 +53,7 @@ def practice_transfer_learning():
         stock_manager.trainModel(ticker="2330.TW", epochs_general=50, epochs_particular=50)
 
     if isPredict:
-        stock_manager.predict_day(ticker="2330.TW", date="2026-04-03")
+        stock_manager.predict_day(ticker="2330.TW", date="2026-04-30")
 
     return
 
@@ -111,5 +111,5 @@ def practice_mta_model():
 
 if __name__ == "__main__":
     # test_StockManager()
-    # practice_transfer_learning()
-    practice_mta_model()             # NEW: MTA model (thesis architecture)
+    practice_transfer_learning()
+    # p0ractice_mta_model()             # NEW: MTA model (thesis architecture)
